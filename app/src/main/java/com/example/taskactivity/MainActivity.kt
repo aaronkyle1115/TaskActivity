@@ -20,13 +20,15 @@ class MainActivity : AppCompatActivity() {
         var login = findViewById<Button>(R.id.Login)
 
         login.setOnClickListener {
-            val user_name = username.text;
-            val pass_word = password.text;
-            Toast.makeText(this@MainActivity, user_name, Toast.LENGTH_LONG).show()
-
-            if (user_name.equals("User") and pass_word.equals("password"))
+            val user_name = username.getText().toString();
+            val pass_word = password.getText().toString();
+            if (user_name.equals("User") and pass_word.equals("password")){
+                Toast.makeText(this, "Successfully Logged In",Toast.LENGTH_LONG).show()
                 openTaskMenu();
-
+            }
+            else{
+                Toast.makeText(this, "Successfully Logged In",Toast.LENGTH_LONG).show()
+            }
         }
 
     }
