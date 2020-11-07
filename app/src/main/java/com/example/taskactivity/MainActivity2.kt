@@ -49,7 +49,7 @@ class MainActivity2 : AppCompatActivity() {
     }
 
     fun web() {
-        val net: Intent = Uri.parse("http://wwww.newgrounds.com").let { webpage ->
+        val net: Intent = Uri.parse("http://www.newgrounds.com").let { webpage ->
             Intent(Intent.ACTION_VIEW, webpage)
         }
         startActivity(net)
@@ -59,7 +59,7 @@ class MainActivity2 : AppCompatActivity() {
             .setTitle("Error")
             .setMessage("The intent failed due to not existing")
             .setNeutralButton("OK") { _, _ ->
-                Toast.makeText(this@MainActivity2, "Error", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity2, "Error it really doesn't", Toast.LENGTH_LONG).show()
             }
             .create()
         errorDialog.show()
